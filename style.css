@@ -53,3 +53,19 @@ margin-top: 40px;
 header {
   position: relative;
 }
+.internal-nav {
+background: #1a1f2e;
+text-align: center;
+padding: 10px;
+}
+
+.internal-nav a {
+color: #e6e9ef;
+margin: 0 12px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.internal-nav a:hover {
+text-decoration: underline;
+}
