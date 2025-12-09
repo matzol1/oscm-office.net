@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Restricted Access — OSCM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-box {
+            max-width: 400px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        button {
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Restricted Access Portal</h1>
+    <p>Authorized Personnel Only</p>
+</header>
+
+<div class="container login-box">
+    <h2>OSCM Authentication Gateway</h2>
+
+    <p>Access is limited to authorized users with valid credentials.</p>
+
+    <input id="username" type="text" placeholder="User ID">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Sign In</button>
+
+    <p class="error" id="error">Access denied. Invalid credentials.</p>
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    // Fake “correct” credentials (you can change these)
+    const VALID_USER = "oscm-user";
+    const VALID_PASS = "secure2025";
+
+    if (user === VALID_USER && pass === VALID_PASS) {
+        window.location.href = "secure.html"; // destination page
+    } else {
+        document.getElementById("error").style.display = "block";
+    }
+}
+</script>
+
+<footer>
+    © OSCM — Access Control Division
+</footer>
+
+</body>
+</html>
