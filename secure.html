@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <div class="warning-banner">
-<h3>WARNING: AUTHORIZED ACCESS ONLY</h3>
+<div id="restricted-warning" class="warning-box">
+<strong>RESTRICTED ACCESS NOTICE</strong>
 <p>
-This system is operated by the Office of Strategic Contingency Management (OSCM) and contains
-controlled information. Unauthorized access, use, disclosure, or modification of any material
-on this system is strictly prohibited and may result in criminal and civil penalties.
+This system is operated by the Office of Strategic Contingency Management (OSCM)
+and containscontrolled information. Unauthorized access, use, disclosure, or
+modification of any materialon this system is strictly prohibited and may result in criminal and civil penalties.
 </p>
-<p>
-Violations may constitute offenses under, but not limited to:
-<br>• <strong>18 U.S.C. § 641</strong> – Theft or conversion of government information
-<br>• <strong>18 U.S.C. § 1030</strong> – Computer Fraud and Abuse Act (Unauthorized Access)
-<br>• <strong>18 U.S.C. § 1924</strong> – Unauthorized removal and retention of classified documents
-<br>• <strong>44 U.S.C. § 3544</strong> – Federal Information Security Management Act (FISMA)
-</p>
-<p>
-By accessing this system, you acknowledge monitoring, recording, and auditing of usage.
-All actions may be logged and reported to federal oversight authorities.
-</p>
-        <button id="dismiss-warning" class="dismiss-btn">I understand</button>
+<p>Violations may constitute offenses.</p>
+<button id="dismiss-warning" class="dismiss-btn">I Understand</button>
 </div>
-<script>
-    document.getElementById("dismiss-warning').addEventListener("click", function() {
-    });
-</script>
 <head>
     <meta charset="UTF-8">
     <title>OSCM Secure Portal</title>
@@ -56,6 +42,17 @@ All actions may be logged and reported to federal oversight authorities.
 <footer>
     © OSCM — Internal Systems Directorate
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const btn = document.getElementById("dismiss-warning");
+const box = document.getElementById("restricted-warning");
 
+if (btn && box) {
+btn.addEventListener("click", function() {
+box.style.display = "none";
+});
+}
+});
+</script>
 </body>
 </html>
