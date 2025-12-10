@@ -69,27 +69,6 @@ font-weight: bold;
 .internal-nav a:hover {
 text-decoration: underline;
 }
-.warning-banner {
-background: #fff3cd;
-border-left: 6px solid #856404;
-padding: 15px;
-margin: 20px 0;
-color: #5a4b00;
-font-size: 0.95rem;
-}
-.dismiss-btn {
-  background-color: #d49b00;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  margin-top: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-}
-.dissmiss-btn:hover {
-  background-color: #a77a00;
-}
 .warning-box {
 background: #fff8e5;
 border: 1px solid #e0c27b;
