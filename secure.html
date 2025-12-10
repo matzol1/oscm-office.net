@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<div id="restricted-warning" class="warning-box">
-<strong>RESTRICTED ACCESS NOTICE</strong>
+<div id="warning-banner" class="warning-box">
+<h2>⚠️ Restricted Access Notice</h2>
 <p>
-This system is operated by the Office of Strategic Contingency Management (OSCM)
-and containscontrolled information. Unauthorized access, use, disclosure, or
-modification of any materialon this system is strictly prohibited and may result in criminal and civil penalties.
+This dashboard contains controlled information. Access is restricted to
+personnel with Level 2 authorization or higher. Unauthorized access is
+prohibited under 18 U.S.C. § 1030.
 </p>
-<p>Violations may constitute offenses.</p>
-<button id="dismiss-warning" class="dismiss-btn">I Understand</button>
+<button id="dismiss-warning" class="warning-btn">I Understand</button>
 </div>
 <head>
     <meta charset="UTF-8">
@@ -52,6 +51,15 @@ btn.addEventListener("click", function() {
 box.style.display = "none";
 });
 }
+});
+</script>
+<script>
+document.getElementById("dismiss-warning").addEventListener("click", function() {
+const warning = document.getElementById("warning-banner");
+warning.classList.add("fade-out");
+setTimeout(() => {
+warning.style.display = "none";
+}, 400);
 });
 </script>
 </body>
