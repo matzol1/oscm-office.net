@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classified Files – OSCM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV BAR -->
+<header class="navbar">
+<h1 class="agency-title">OSCM — Internal Access</h1>
+<nav>
+<ul>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="briefings.html">Briefings</a></li>
+<li><a class="active" href="classified.html">Classified Files</a></li>
+<li><a href="field_reports.html">Field Reports</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- Warning Banner -->
+<div id="warningBox" class="warning-box">
+<strong>WARNING:</strong> You are accessing CLASSIFIED materials.
+Unauthorized distribution is a federal offense under
+<strong>18 U.S.C. § 793, § 798, and § 1924.</strong>
+<br><br>
+<button id="dismissWarning">I Understand</button>
+</div>
+
+<h2>Level 2 – Classified Files</h2>
+<p>These documents contain controlled material. Handle according to OSCM Directive 12-4B.</p>
+
+<hr>
+
+<!-- Classified File List -->
+<section class="classified-list">
+
+<div class="file-entry">
+<h3>CF-2025-11A — Infrastructure Vulnerability Review</h3>
+<p>Quarterly analysis of critical infrastructure anomalies, sensor drift patterns, and unexplained system fluctuations.</p>
+<a href="pdfs/CF-2025-11A.pdf" class="file-link" target="_blank">Open PDF</a>
+</div>
+
+<div class="file-entry">
+<h3>CF-2025-09B — Pattern Observation Log Archive</h3>
+<p>Compiled observational logs from field teams regarding recurring spatial, electromagnetic, and behavioral irregularities.</p>
+<a href="pdfs/CF-2025-09B.pdf" class="file-link" target="_blank">Open PDF</a>
+</div>
+
+<div class="file-entry">
+<h3>CF-2024-22C — Inter-Agency Response Framework Draft</h3>
+<p>Preliminary coordination protocol for multi-agency anomalous event mobilization.</p>
+<a href="pdfs/CF-2024-22C.pdf" class="file-link" target="_blank">Open PDF</a>
+</div>
+
+<div class="file-entry">
+<h3>CF-2023-18D — Archived Special Case Summary</h3>
+<p>Declassified overview of a legacy anomalous case file, redacted for Level 2 clearance.</p>
+<a href="pdfs/CF-2023-18D.pdf" class="file-link" target="_blank">Open PDF</a>
+</div>
+
+</section>
+
+</div>
+
+<script>
+document.getElementById("dismissWarning").addEventListener("click", function() {
+document.getElementById("warningBox").style.display = "none";
+});
+</script>
+
+</body>
+</html>
